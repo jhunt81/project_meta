@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+
+.logo {
+  height: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  padding-right: 25px;
+  padding-top: 25px;
+}
+
+.hero {
+  display: block;
+  width: 1200px;
+  height: 350px;
+  margin: auto;
+}
+
+.promo  {
+  font-size: large;
+}
+
+
+
+nav ul {
+  background-color: #ffffff;
+  color: #000000;
+  list-style: none;
+  text-align: right;
+  padding: 20px 0 20px 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 25px 0 25px;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #c1c1c1;
+}
+
+
+.image  {
+  position: relative;
+  /*width: 400px;*/
+}
+
+.image_img  {
+  display: block;
+  width: 100%;
+}
+
+.image_overlay  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: 'EB Garamond', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.image_overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image_overlay:hover {
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+.image_overlay:hover > * {
+  transform: translateY(0);
+}
+
+
+.image_title  {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image_description  {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
+.container  {
+  --gap: 16px
+  --num-cols: 4;
+  --row-height: 300px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+  /*grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);*/
+}
+
+.image_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+}
+
+footer div {
+  flex: 1;
+}
+
+
+
+@media screen and (max-width: 1024px){
+  .container {
+    --num-cols: 1;
+    --row-height: 200px;
+  }
+  
+}
